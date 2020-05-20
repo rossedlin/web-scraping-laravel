@@ -21,12 +21,9 @@
         <p class="g-font-size-16">
             I'm making use of
             <a href="https://laravel.com/" target="_blank">Laravel</a> as a backend framework,
-            <a href="https://packagist.org/packages/guzzlehttp/guzzle" target="_blank">Guzzle</a> for the API request
-            and
-
-
-            <a href="https://symfony.com/doc/current/components/dom_crawler.html"
-               target="_blank">Symfony Dom Crawler</a>...
+            <a href="https://packagist.org/packages/guzzlehttp/guzzle" target="_blank">Guzzle</a> to scrape the website
+            and <a href="https://symfony.com/doc/current/components/dom_crawler.html"
+                   target="_blank">Symfony Dom Crawler</a> to filter the results.
 
 
         </p>
