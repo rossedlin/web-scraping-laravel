@@ -16,4 +16,4 @@ use Illuminate\Http\Request;
 /**
  * Api Integration Get
  */
-Route::post('/api-integration/get-request', 'ApiIntegrationController@apiGetRequest');
+Route::post('/web-scrapping/get-request', 'WebScrappingController@apiGetRequest');

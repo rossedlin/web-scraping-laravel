@@ -14,5 +14,4 @@
 /**
  * Stripe
  */
-Route::get('/', 'ApiIntegrationController');
-Route::get('/success', 'ApiIntegrationController@success');
+Route::get('/', 'WebScrappingController');
