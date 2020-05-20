@@ -1,3 +1,8 @@
+<?php
+/**
+ * @var string $scrapeUrl
+ */
+?>
 @extends('layout.default')
 
 @section('content')
@@ -38,17 +43,10 @@
             </div>
 
             <div class="col-md-12 form-group">
-                <div class="row">
-                    <input class="form-control col-md-6"
-                           type="text"
-                           placeholder="https://www.google.co.uk/search?q="
-                           value="https://www.google.co.uk/search?q=" disabled>
-                    <input id="search_value"
-                           class="form-control col-md-6"
-                           type="text"
-                           placeholder="Ross+Edlin"
-                           value="Ross+Edlin">
-                </div>
+                <input class="form-control"
+                       type="text"
+                       placeholder="<?= $scrapeUrl ?>"
+                       value="<?= $scrapeUrl ?>" disabled>
             </div>
 
             <div class="col-sm-12 form-group">
@@ -112,8 +110,7 @@
             $('#web-scraping-result').val('');
             $('#web-scraping-button').find('.fa-spinner').show();
 
-            $.post('<?= url('api/web-scraping/google') ?>', {
-                search_value: $('#search_value').val(),
+            $.post('<?= url('api/web-scraping/ross-edlin') ?>', {
                 _token:       '<?= csrf_token(); ?>'
             })
              .done(function (jsonString, textStatus, jqXHR) {

@@ -14,42 +14,54 @@ use Illuminate\Http\Request;
  */
 class WebScrapingController extends Controller
 {
-    const GOOGLE_URL = 'https://www.google.co.uk/search?q=';
-
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function __invoke()
     {
         return view('index', [
-            'googleUrl'  => self::GOOGLE_URL,
+            'scrapeUrl'  => $this->getBaseUrl() . $this->getSubUrl(),
             'cssVersion' => md5(file_get_contents(__DIR__ . '/../../../public/css/app.css')),
             'jsVersion'  => md5(file_get_contents(__DIR__ . '/../../../public/js/app.js')),
         ]);
     }
 
     /**
+     * @param Request $request
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      * @throws \Exception
      */
-    public function apiGoogleSearch(Request $request)
+    public function apiScrapeRossEdlin(Request $request)
     {
-        $searchValue = \App\WebScraper\GoogleSearch::searchify($request->post('search_value', 'Ross+Edlin'));
-        $subUrl      = '/search?q=' . $searchValue;
-        $fullUrl     = self::GOOGLE_URL . $searchValue;
-        pre($searchValue);
-        pre($subUrl);
-        pre($fullUrl);
+        $scraper = new \App\WebScraper\RossEdlin();
+        $scrape  = $scraper->scrape($this->getBaseUrl(), [
+            'subUrl' => $this->getSubUrl(),
+        ]);
+
+        pre($scrape);
         exit;
 
-//
-//        $scraper            = new WebScraper\Google\Search();
 //        $this->data['url']  = 'https://www.google.co.uk' . $subUrl;
-//        $this->data['rows'] = $scraper->scrap('https://www.google.co.uk/', [
-//            'subUrl' => $subUrl,
-//        ]);
 
         return view('table', [
             'obj' => new \stdClass(),
         ]);
+    }
+
+    /**
+     * @return string
+     */
+    private function getBaseUrl(): string
+    {
+        return 'https://www.rossedlin.com/';
+    }
+
+    /**
+     * @return string
+     */
+    private function getSubUrl(): string
+    {
+        return 'blog/';
     }
 }
