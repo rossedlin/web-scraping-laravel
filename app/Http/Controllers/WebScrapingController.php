@@ -39,13 +39,9 @@ class WebScrapingController extends Controller
             'subUrl' => $this->getSubUrl(),
         ]);
 
-        pre($scrape);
-        exit;
-
-//        $this->data['url']  = 'https://www.google.co.uk' . $subUrl;
-
         return view('table', [
-            'obj' => new \stdClass(),
+            'url'  => $this->getFullUrl(),
+            'rows' => $scrape,
         ]);
     }
 
@@ -63,5 +59,13 @@ class WebScrapingController extends Controller
     private function getSubUrl(): string
     {
         return 'blog/';
+    }
+
+    /**
+     * @return string
+     */
+    private function getFullUrl(): string
+    {
+        return $this->getBaseUrl() . $this->getSubUrl();
     }
 }

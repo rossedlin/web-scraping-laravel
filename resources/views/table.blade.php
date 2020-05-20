@@ -5,30 +5,36 @@
  * Date: 2020-05-14
  * Time: 12:19
  *
- * @var \stdClass $obj
+ * @var string $url
+ * @var array  $rows
  */
 ?>
 
-<table class="table">
-    <thead class="thead-dark">
-    <tr>
-        <th scope="col">ID</th>
-        <th scope="col">Email</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Avatar</th>
-    </tr>
-    </thead>
-    <tbody>
+<div class="col-xs-12">
+    I just scrapped this url
+    <a href="<?= $url ?>" target="_blank" style="color: #00A8FF;"><?= $url ?></a>, here are the results
+</div>
 
-    <?php foreach($obj->data as $item) { ?>
+<div class="col-xs-12 mt-5">
+    <table class="table">
+        <thead class="thead-dark">
         <tr>
-            <th scope="row"><?= $item->id  ?></th>
-            <td><?= $item->email  ?></td>
-            <td><?= $item->first_name  ?></td>
-            <td><?= $item->last_name  ?></td>
-            <td><img src="<?= $item->avatar ?>" height="64" alt="Avatar"></td>
+            <th scope="col">Blog Thumbnail</th>
+            <th scope="col">Title</th>
+            <th scope="col">Href</th>
+            <th scope="col">Description</th>
         </tr>
-    <?php } ?>
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+
+        <?php foreach($rows as $row) { ?>
+        <tr>
+            <td><img src="<?= $row['img'] ?>" height="64" alt="Blog Thumbnail"></td>
+            <td><?= $row['title'] ?></td>
+            <td><a href="<?= $row['href'] ?>" target="_blank"><?= $row['href'] ?></a></td>
+            <td><?= $row['description'] ?></td>
+        </tr>
+        <?php } ?>
+        </tbody>
+    </table>
+</div>

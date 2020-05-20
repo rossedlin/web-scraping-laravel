@@ -113,13 +113,11 @@
             $.post('<?= url('api/web-scraping/ross-edlin') ?>', {
                 _token:       '<?= csrf_token(); ?>'
             })
-             .done(function (jsonString, textStatus, jqXHR) {
-
-                 // var jsonObj = $.parseJSON(jsonString);
+             .done(function (rawHtml, textStatus, jqXHR) {
 
                  $('#web-scraping-button').find('.fa-spinner').hide();
-                 // $('#web-scraping-info').html('Done!');
-                 // $('#results-table').html(jsonObj['html']);
+                 $('#web-scraping-info').html('Done!');
+                 $('#results-table').html(rawHtml);
 
              })
              .fail(function (jqXHR, textStatus, errorThrown) {

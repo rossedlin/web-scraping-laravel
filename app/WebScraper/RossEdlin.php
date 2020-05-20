@@ -12,8 +12,6 @@ namespace App\WebScraper;
  */
 class RossEdlin extends AbstractWebScraper
 {
-    //https://www.google.co.uk/search?q=Ross+Edlin
-
     /**
      * @param string $baseUrl
      * @param array  $args
