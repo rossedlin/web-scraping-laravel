@@ -14,4 +14,4 @@
 /**
  * Stripe
  */
-Route::get('/', 'WebScrappingController');
+Route::get('/', 'WebScrapingController');

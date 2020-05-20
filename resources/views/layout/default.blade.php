@@ -61,10 +61,10 @@
 
         <div class="col-sm-12 mt-5 mb-5">
             <div class="links">
-                <a href="<?= env('APP_URL') ?>">Home</a>
-                <a href="https://www.rossedlin.com/" target="_blank">www.rossedlin.com</a>
-                <a href="https://www.rossedlin.com/linkedin" target="_blank">LinkedIn</a>
-                <a href="https://www.rossedlin.com/github" target="_blank">GitHub</a>
+                <a href="https://www.rossedlin.com/" target="_blank">Home</a>
+                <a href="https://www.rossedlin.com/portfolio/" target="_blank">Portfolio</a>
+                <a href="https://www.rossedlin.com/linkedin/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/rossedlin/web-scraping-demo/blob/master/app/Http/Controllers/WebScrapingController.php" target="_blank">GitHub (Source Code)</a>
             </div>
         </div>
 
