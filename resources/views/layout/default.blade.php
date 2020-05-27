@@ -13,10 +13,32 @@
         <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title><?= config('app.name') ?></title>
+
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="canonical" href="https://www.rossedlin.com/portfolio-sites/web-scraping-demo/" />
+
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="description" content="Web Scraping Demo | A Portfolio Demonstration Piece by Ross Edlin." />
+
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Web Scraping Demo | A Portfolio Demonstration Piece by Ross Edlin" />
+    <meta property="og:description" content="Web Spraping Demo | A Portfolio Demonstration Piece by Ross Edlin." />
+    <meta property="og:url" content="https://www.rossedlin.com/" />
+    <meta property="og:site_name" content="Ross Edlin" />
+
+    <meta property="article:modified_time" content="2020-05-27T06:16:44+00:00" />
+    <meta property="og:image" content="https://www.rossedlin.com/wp-content/uploads/2020/05/web-scraping-450x200-1.jpg" />
+    <meta property="og:image:width" content="450" />
+    <meta property="og:image:height" content="200" />
+    <meta name="twitter:card" content="summary_large_image" />
+
 
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
