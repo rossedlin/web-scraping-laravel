@@ -35,7 +35,7 @@ class RossEdlin extends AbstractWebScraper
          */
         $return        = [];
         $html          = $this->getHtmlFromUrl($baseUrl, $subUrl);
-        $searchResults = $this->filterHtmlArray($html, '#news-section article');
+        $searchResults = $this->filterHtmlArray($html, 'section article');
 
         /**
          * Filter each search result
