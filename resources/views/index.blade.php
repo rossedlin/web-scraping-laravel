@@ -13,7 +13,7 @@
             Web Scraping
         </h1>
         <p class="g-font-size-16">
-            Hey, I'm an Web Scraping Demo.<br/>
+            Hey, I'm a Web Scraper.<br/>
             I can scrape a website URL and cherry pick specific bits of information and display it in a nice table.<br/>
             Try me and see what happens. If you like it and want it on your site,
             <a href="https://www.rossedlin.com/hire/" target="_blank"> contact / hire me here.</a>

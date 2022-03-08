@@ -24,12 +24,12 @@
     <meta name="robots" content="index, follow" />
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    <meta name="description" content="Web Scraping Demo | A Portfolio Demonstration Piece by Ross Edlin." />
+    <meta name="description" content="Web Scraping Laravel | A Portfolio Demonstration Piece by Ross Edlin." />
 
     <meta property="og:locale" content="en_GB" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Web Scraping Demo | A Portfolio Demonstration Piece by Ross Edlin" />
-    <meta property="og:description" content="Web Spraping Demo | A Portfolio Demonstration Piece by Ross Edlin." />
+    <meta property="og:title" content="Web Scraping Laravel | A Portfolio Demonstration Piece by Ross Edlin" />
+    <meta property="og:description" content="Web Spraping Laravel | A Portfolio Demonstration Piece by Ross Edlin." />
     <meta property="og:url" content="https://www.rossedlin.com/" />
     <meta property="og:site_name" content="Ross Edlin" />
 
@@ -40,13 +40,12 @@
     <meta name="twitter:card" content="summary_large_image" />
 
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="icon" href="https://assets.edlin.app/favicon/favicon.ico"/>
 
-    <link href="<?= config('app.url') . \Edlin\Core\Utils::addVersionToFile("/css/app.css", $cssVersion); ?>" rel="stylesheet">
-    <script src="<?= config('app.url') . \Edlin\Core\Utils::addVersionToFile("/js/app.js", $jsVersion); ?>"></script>
+    <link href="https://assets.edlin.app/css/bootstrap/v4.6/bootstrap.css" rel="stylesheet">
+    <script src="https://assets.edlin.app/js/bootstrap/v4.6/bootstrap.js"></script>
+
+    <link href="https://assets.edlin.app/css/font-awesome/v5.13/font-awesome.css" rel="stylesheet">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -86,7 +85,7 @@
                 <a href="https://www.rossedlin.com/" target="_blank">Home</a>
                 <a href="https://www.rossedlin.com/portfolio/" target="_blank">Portfolio</a>
                 <a href="https://www.rossedlin.com/contact/" target="_blank">Contact</a>
-                <a href="https://github.com/rossedlin/web-scraping-demo/blob/master/app/Http/Controllers/WebScrapingController.php" target="_blank">GitHub (Source Code)</a>
+                <a href="https://www.rossedlin.com/...." target="_blank">BitBucket (Source Code)</a>
             </div>
         </div>
 
