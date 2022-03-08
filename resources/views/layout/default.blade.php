@@ -85,7 +85,7 @@
             <div class="links">
                 <a href="https://www.rossedlin.com/" target="_blank">Home</a>
                 <a href="https://www.rossedlin.com/portfolio/" target="_blank">Portfolio</a>
-                <a href="https://www.rossedlin.com/linkedin/" target="_blank">LinkedIn</a>
+                <a href="https://www.rossedlin.com/contact/" target="_blank">Contact</a>
                 <a href="https://github.com/rossedlin/web-scraping-demo/blob/master/app/Http/Controllers/WebScrapingController.php" target="_blank">GitHub (Source Code)</a>
             </div>
         </div>
