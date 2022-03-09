@@ -35,7 +35,7 @@ class RossEdlin extends AbstractWebScraper
          */
         $return        = [];
         $html          = $this->getHtmlFromUrl($baseUrl, $subUrl);
-        $searchResults = $this->filterHtmlArray($html, 'section article');
+        $searchResults = $this->filterHtmlArray($html, '#blog-post-rows > div');
 
         /**
          * Filter each search result
@@ -102,7 +102,7 @@ class RossEdlin extends AbstractWebScraper
     private function extractHref($html)
     {
         try {
-            return trim(strip_tags($this->filterHref($html, 'h2 a')));
+            return 'https://www.rossedlin.com' . trim(strip_tags($this->filterHref($html, 'h2 a')));
         } catch (\Exception $e) {
             return "";
         }
