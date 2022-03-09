@@ -83,9 +83,10 @@
         <div class="col-sm-12 mt-5 mb-5">
             <div class="links">
                 <a href="https://www.rossedlin.com/" target="_blank">Home</a>
-                <a href="https://www.rossedlin.com/portfolio/" target="_blank">Portfolio</a>
-                <a href="https://www.rossedlin.com/contact/" target="_blank">Contact</a>
-                <a href="https://www.rossedlin.com/...." target="_blank">BitBucket (Source Code)</a>
+                <a href="https://www.rossedlin.com/portfolio" target="_blank">Portfolio</a>
+                <a href="https://www.rossedlin.com/contact" target="_blank">Contact</a>
+                <a href="https://www.rossedlin.com/linkedin" target="_blank">LinkedIn</a>
+                <a href="https://www.rossedlin.com/portfolio/web-scraping-laravel/code" target="_blank">BitBucket (Source Code)</a>
             </div>
         </div>
 
