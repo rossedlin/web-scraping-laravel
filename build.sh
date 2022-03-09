@@ -20,6 +20,12 @@ docker exec -it web-scraping-laravel-web-1 composer install
 #docker exec -it web-scraping-laravel-web-1 npm run dev
 
 #
+# Environment File
+#
+docker exec -it web-scraping-laravel-web-1 php -r "file_exists('.env') || copy('.env.example', '.env');"
+docker exec -it web-scraping-laravel-web-1 php artisan key:generate
+
+#
 # End
 #
 docker compose down
