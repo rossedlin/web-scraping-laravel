@@ -48,7 +48,7 @@ class WebScrapingController extends Controller
      */
     private function getBaseUrl(): string
     {
-        return 'https://www.codewithross.com/';
+        return 'https://dev.codewithross.com/';
     }
 
     /**

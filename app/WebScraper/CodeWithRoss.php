@@ -35,18 +35,21 @@ class CodeWithRoss extends AbstractWebScraper
          */
         $return        = [];
         $html          = $this->getHtmlFromUrl($baseUrl, $subUrl);
-        $searchResults = $this->filterHtmlArray($html, '#blog-post-rows > div');
+        $searchResults = $this->filterHtmlArray($html, '#blog-posts > div > div > div');
 
         /**
          * Filter each search result
          */
         foreach ($searchResults as $searchResult) {
-            $return[] = [
+
+            $item = [
                 'title'       => $this->extractTitle($searchResult),
                 'img'         => $this->extractImg($searchResult),
                 'href'        => $this->extractHref($searchResult),
                 'description' => $this->extractDescription($searchResult),
             ];
+
+            $return[] = $item;
         }
 
         return $return;
@@ -59,7 +62,7 @@ class CodeWithRoss extends AbstractWebScraper
      */
     private function isBaseUrlValid($baseUrl)
     {
-        if ($baseUrl === 'https://www.codewithross.com/') {
+        if ($baseUrl === 'https://dev.codewithross.com/') {
             return true;
         }
 
@@ -74,7 +77,7 @@ class CodeWithRoss extends AbstractWebScraper
     private function extractTitle($html)
     {
         try {
-            return trim(strip_tags($this->filterHtmlSingle($html, 'h2 a')));
+            return trim(strip_tags($this->filterHtmlSingle($html, 'h5')));
         } catch (\Exception $e) {
             return "";
         }
@@ -88,7 +91,7 @@ class CodeWithRoss extends AbstractWebScraper
     private function extractImg($html)
     {
         try {
-            return trim(strip_tags($this->filterSrc($html, 'img')));
+            return 'https://dev.codwithross.com' . trim(strip_tags($this->filterSrc($html, 'img')));
         } catch (\Exception $e) {
             return "";
         }
@@ -102,7 +105,7 @@ class CodeWithRoss extends AbstractWebScraper
     private function extractHref($html)
     {
         try {
-            return 'https://www.codwithross.com' . trim(strip_tags($this->filterHref($html, 'h2 a')));
+            return 'https://dev.codwithross.com' . trim(strip_tags($this->filterHref($html, 'a')));
         } catch (\Exception $e) {
             return "";
         }
@@ -116,7 +119,7 @@ class CodeWithRoss extends AbstractWebScraper
     private function extractDescription($html)
     {
         try {
-            return trim(strip_tags($this->filterHtmlSingle($html, 'p')));
+            return trim(strip_tags($this->filterHtmlSingle($html, 'div .card-text')));
         } catch (\Exception $e) {
             return "";
         }

@@ -19,7 +19,7 @@
     <table class="table">
         <thead class="thead-dark">
         <tr>
-            <th scope="col">Blog Thumbnail</th>
+{{--            <th scope="col">Blog Thumbnail</th>--}}
             <th scope="col">Title</th>
             <th scope="col">Href</th>
             <th scope="col">Description</th>
@@ -29,7 +29,7 @@
 
         <?php foreach($rows as $row) { ?>
         <tr>
-            <td><img src="<?= $row['img'] ?>" height="64" alt="Blog Thumbnail"></td>
+{{--            <td><img src="<?= $row['img'] ?>" height="64" alt="Blog Thumbnail"></td>--}}
             <td><?= $row['title'] ?></td>
             <td><a href="<?= $row['href'] ?>" target="_blank"><?= $row['href'] ?></a></td>
             <td><?= $row['description'] ?></td>
