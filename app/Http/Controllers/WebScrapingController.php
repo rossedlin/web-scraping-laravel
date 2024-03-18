@@ -30,9 +30,9 @@ class WebScrapingController extends Controller
      * @return Factory|\Illuminate\View\View
      * @throws \Exception
      */
-    public function apiScrapeRossEdlin(Request $request)
+    public function apiScrape(Request $request)
     {
-        $scraper = new \App\WebScraper\RossEdlin();
+        $scraper = new \App\WebScraper\CodeWithRoss();
         $scrape  = $scraper->scrape($this->getBaseUrl(), [
             'subUrl' => $this->getSubUrl(),
         ]);
@@ -48,7 +48,7 @@ class WebScrapingController extends Controller
      */
     private function getBaseUrl(): string
     {
-        return 'https://www.rossedlin.com/';
+        return 'https://www.codewithross.com/';
     }
 
     /**
@@ -56,7 +56,7 @@ class WebScrapingController extends Controller
      */
     private function getSubUrl(): string
     {
-        return 'blog/';
+        return '';
     }
 
     /**
