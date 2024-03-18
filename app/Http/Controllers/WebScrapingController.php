@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\Client\Request;
 
 /**
  * Created by PhpStorm.
@@ -10,26 +13,24 @@ use Illuminate\Http\Request;
  * Date: 20/05/2020
  * Time: 13:26
  *
- * Class WebScrapingControlle
+ * Class WebScrapingController
  */
 class WebScrapingController extends Controller
 {
     /**
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @return mixed
      */
-    public function __invoke()
+    public function __invoke(): mixed
     {
         return view('index', [
-            'scrapeUrl'  => $this->getBaseUrl() . $this->getSubUrl(),
-            'cssVersion' => md5(file_get_contents(__DIR__ . '/../../../public/css/app.css')),
-            'jsVersion'  => md5(file_get_contents(__DIR__ . '/../../../public/js/app.js')),
+            'scrapeUrl' => $this->getBaseUrl() . $this->getSubUrl(),
         ]);
     }
 
     /**
      * @param Request $request
      *
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @return Factory|\Illuminate\View\View
      * @throws \Exception
      */
     public function apiScrapeRossEdlin(Request $request)
