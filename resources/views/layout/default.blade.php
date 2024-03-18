@@ -31,10 +31,13 @@
 
     <link rel="icon" href="https://assets.edlin.app/favicon/favicon.ico"/>
 
-    <link href="https://assets.edlin.app/bootstrap/v4.6/bootstrap.css" rel="stylesheet">
-{{--    <script src="https://assets.edlin.app/js/bootstrap/v4.6/bootstrap.js"></script>--}}
+    <link rel="stylesheet" href="https://assets.edlin.app/bootstrap/v4.6/bootstrap.css">
 
-    <link href="https://assets.edlin.app/css/font-awesome/v5.13/font-awesome.css" rel="stylesheet">
+    <script src="https://assets.edlin.app/jquery/v3.5.1/jquery.js"></script>
+    <script src="https://assets.edlin.app/popper/v1.16.1/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://assets.edlin.app/bootstrap/v4.6/bootstrap.min.js" integrity="sha384-y8D4caEr7nE9D1BS7y+5VzB/NI8fwXvZ+Q8r9MDv8eBNF3N+ed74/4o3FClFDuB6" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://assets.edlin.app/fontawesome/v5.15.4/css/all.css" integrity="sha384-7rgjkhkxJ95zOzIjk97UrBOe14KgYpH9+zQm5BdgzjQELBU6kHf4WwoQzHfTx5sw" crossorigin="anonymous">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
