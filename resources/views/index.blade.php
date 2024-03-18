@@ -107,9 +107,7 @@
             $('#web-scraping-result').val('');
             $('#web-scraping-button').find('.fa-spinner').show();
 
-            $.post('<?= url('api/web-scraping/ross-edlin') ?>', {
-                _token:       '<?= csrf_token(); ?>'
-            })
+            $.get('<?= url('api/web-scraping/ross-edlin') ?>')
              .done(function (rawHtml, textStatus, jqXHR) {
 
                  $('#web-scraping-button').find('.fa-spinner').hide();
